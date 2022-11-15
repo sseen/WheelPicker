@@ -9,14 +9,31 @@
     android:paddingBottom="16dp"
     tools:background="#66000000">
 
-    <FrameLayout
-        android:id="@+id/container_view"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="222dp"
-        android:background="@drawable/wheel_action_sheet_bg"
-        android:paddingHorizontal="24dp">
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:layout_height="match_parent">
 
-    </FrameLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:paddingTop="8dp"
+            android:background="@drawable/wheel_top_title_bg"
+            android:text="TextView" />
+
+        <FrameLayout
+            android:id="@+id/container_view"
+            android:layout_width="match_parent"
+            android:layout_height="222dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/wheel_action_sheet_bg"
+            android:paddingHorizontal="24dp">
+        </FrameLayout>
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/ok_button"

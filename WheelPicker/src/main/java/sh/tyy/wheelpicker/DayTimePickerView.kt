@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.*
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import sh.tyy.wheelpicker.core.BaseWheelPickerView
 import sh.tyy.wheelpicker.core.TextWheelAdapter
 import sh.tyy.wheelpicker.core.TextWheelPickerView

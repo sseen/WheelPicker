@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import sh.tyy.wheelpicker.core.BaseWheelPickerView
 import sh.tyy.wheelpicker.core.TextWheelAdapter
 import sh.tyy.wheelpicker.core.TextWheelPickerView
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity(), PickerExample {
         setContentView(R.layout.activity_main)
         pickerView = findViewById(R.id.picker_view)
         pickerView.setAdapter(simpleAdapter)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+
         simpleAdapter.values = (0 until 20).map { TextWheelPickerView.Item("$it", "index-$it") }
         selectedItemTextView = findViewById(R.id.selected_text_view)
         circularCheckBox = findViewById(R.id.circular_check_box)
